@@ -1,19 +1,23 @@
 package com.timbuchalka;
 
+import java.util.Arrays;
+
 public class Main {
 
     public static void main(String[] args) {
         // write your code here
-        System.out.println(array);
-        System.out.println("Reversed array: " + reverse(array));
+        int[] array = {4, 1, 5, 2, 12}; // --> [12, 2, 5, 1, 4]
+        System.out.println("Normal array: " + Arrays.toString(array));
+        reverse(array);
     }
-
-    int[] array = {4, 1, 5, 2, 12}; // --> [12, 2, 5, 1, 4]
 
     public static void reverse(int[] array) {
-        for (int i = 0; i < array.length; int ++){
-            array[i] =[array.length - i];
+        for (int i = 0; i < array.length - 1; i++) {
+            array[i] = array[array.length - i]; // 4 --> 4
         }
-
+        System.out.println("Reversed array: " + Arrays.toString(array));
     }
 }
+
+
+//
